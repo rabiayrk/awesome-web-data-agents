@@ -1,0 +1,8 @@
+max_retries = 3
+retry_wait_time = 5
+timeout = 30
+max_concurrency = 8
+accept = ["200..=299", "429"]
+include_fragments = false
+exclude_all_private = true
+user_agent = "Mozilla/5.0 (compatible; lychee link checker)"
