@@ -51,4 +51,4 @@ Project maintainers follow the same rules for their own projects.
 
 ## Removal
 
-Entries are removed when the link is dead, the repository is archived, there have been no commits for 12 months, or the license changes to one that does not fit. Open an issue if you see one of these.
+Any entry is removed when its link is dead and no new location exists. Tools are also removed when the repository is archived, there have been no commits for 12 months, or the license changes to one that does not fit. Benchmarks, datasets and papers do not need recent commits, but archived benchmark repositories are replaced by a paper or dataset link if one exists. Open an issue if you see one of these.
