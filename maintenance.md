@@ -1,11 +1,11 @@
 # Maintenance
 
-A short checklist for the monthly update. The link check workflow runs on the first day of each month and opens an issue if links are broken.
+A short checklist for the monthly update. On the first day of each month two workflows run: the link check opens an issue for broken links, and `scripts/check_repos.py` opens an issue for tools that are archived, moved, or without a push in the last 12 months.
 
 ## Monthly
 
 1. Fix or remove every link in the latest broken links issue.
-2. For each GitHub entry, check the repository page:
+2. Go through the stale entries issue, then check each GitHub entry by hand as well:
    - Archived, or marked deprecated: remove it.
    - No commits in the last 12 months: remove it.
    - License changed to one that does not fit the criteria: remove it.
