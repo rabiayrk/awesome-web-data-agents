@@ -96,7 +96,7 @@ Getting structured records out of pages, either with an LLM on every page or by 
 
 ## Evaluate
 
-Benchmarks, datasets and studies that measure extraction and collection quality.
+Benchmarks, datasets and studies that measure extraction and collection quality. The [evaluation view](evaluation.md) compares the benchmarks in one table.
 
 ### Structured Extraction Benchmarks
 
