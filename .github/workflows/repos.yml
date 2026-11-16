@@ -1,0 +1,28 @@
+name: Repos
+
+on:
+  schedule:
+    - cron: "0 7 1 * *"
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - name: Check GitHub entries
+        id: check
+        continue-on-error: true
+        run: python3 scripts/check_repos.py readme.md > repos-report.md
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Open issue for stale entries
+        if: steps.check.outcome == 'failure'
+        uses: peter-evans/create-issue-from-file@v6.0.0
+        with:
+          title: Stale or archived entries
+          content-filepath: ./repos-report.md
+          labels: maintenance
